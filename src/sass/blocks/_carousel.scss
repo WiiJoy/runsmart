@@ -4,10 +4,6 @@
         position: relative;
         width: 750px;
         margin: 0 auto;
-        img {
-            width: 80%;
-            margin: auto;
-        }
     }
 }
 .slick-prev, .slick-next {
@@ -25,4 +21,47 @@
 .slick-next {
     right: -66px;
     left: auto;
+}
+
+@media (max-width: 991px) {
+    .carousel {
+        &__inner {
+            width: 580px;
+        }
+        &__item {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel {
+        &__inner {
+            width: 90%;
+            position: relative;
+        }
+        .slick-dots {
+            text-align: center;
+            display: flex !important; // поставить кнопки в ряд
+            justify-content: center; // выровнять по центру
+            list-style: none; // убираем черные маркеры
+            margin: 0;
+            padding: 0;
+            // li {
+            //     font-size: 1px;
+            // }
+            button {
+                background: #eddfd477; // цвет фона
+                border: none; // без рамки
+                margin: 5px; // отступы между точками
+                outline: none; // убираем обводку
+            }
+            .slick-active {
+                button {
+                    background: $main-color;
+                }
+            }
+        }
+    }
+    
 }
