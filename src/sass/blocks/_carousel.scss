@@ -42,19 +42,16 @@
         }
         .slick-dots {
             text-align: center;
-            display: flex !important; // поставить кнопки в ряд
-            justify-content: center; // выровнять по центру
-            list-style: none; // убираем черные маркеры
+            display: flex !important;
+            justify-content: center;
+            list-style: none;
             margin: 0;
             padding: 0;
-            // li {
-            //     font-size: 1px;
-            // }
             button {
-                background: #eddfd477; // цвет фона
-                border: none; // без рамки
-                margin: 5px; // отступы между точками
-                outline: none; // убираем обводку
+                background: #eddfd477;
+                border: none;
+                margin: 5px;
+                outline: none;
             }
             .slick-active {
                 button {
