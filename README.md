@@ -5,4 +5,4 @@
   - input и его type
   - использование javascript:
     - slider with silck-slider (during...)
-    - tabs with json
+    - tabs with jQuery
