@@ -1,0 +1,43 @@
+.reviews {
+    padding-bottom: 70px;
+    &__content {
+        margin-top: 70px;
+        hr {
+            width: 940px;
+            height: 1px;
+            background-color: #f6f6f6;
+            border:none;
+            margin-top: 48px;
+            margin-bottom: 49px;
+        }
+    }
+}
+.review {
+    display: flex;
+    justify-content: space-evenly;
+    &__wrapper {
+        width: 650px;
+    }
+    &__photo {
+        height: 169px;
+        margin-right: 62px;
+    }
+    &__name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0d0d0d;
+    }
+    &__achieve {
+        margin-top: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        color: #646464;
+    }
+    &__text {
+        margin-top: 19px;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 300;
+        color: #0d0d0d;
+    }
+}

@@ -64,13 +64,14 @@
             font-size: 14px;
         }
     }
+    .title {
+        font-size: 26px;
+        line-height: 32px;
+        margin: 0;
+    }
     .advant {
         padding: 58px 0 67px 0;
         min-height: 408px;
-        &__header {
-            font-size: 26px;
-            line-height: 26px;
-        }
         &__wrapper {
             justify-content: space-around;
         }
@@ -87,6 +88,25 @@
     }
     .consultation {
         padding-left: 20px;
+    }
+    .catalog {
+        &__content {
+            justify-content: space-evenly;
+        }
+    }
+    .reviews {
+        hr {
+            width: 90%;
+        }
+    }
+    .review {
+        align-content: center;
+        &__photo {
+            margin-right: 0;
+        }
+        &__wrapper {
+            width: 70%;
+        }
     }
 }
 
@@ -121,6 +141,92 @@
     .feed-form {
         margin: 0 auto;
         margin-top: 36px;
+    }
+    .button {
+        &_mini {
+            width: 100px;
+            height: 25px;
+        }
+    }
+    .catalog {
+        padding-bottom: 39px;
+        &__tabs {
+            margin-top: 40px;
+        }
+        &__tab {
+            width: 160px;
+            height: 45px;
+            font-size: 14px;
+            line-height: 45px;
+        }
+        &__content {
+            margin-top: 46px;
+        }
+        &-item {
+            width: 220px;
+            padding: 10px;
+            min-height: 390px;
+            &__img {
+                height: 170px;
+            }
+            &__subtitle {
+                margin-top: 12px;
+                font-size: 14px;
+            }
+            &__descr {
+                margin-top: 12px;
+                font-size: 12px;
+            }
+            &__link {
+                font-size: 12px;
+            }
+            &__list {
+                li {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+            }
+            &__back {
+                font-size: 12px;
+            }
+            hr {
+                margin-top: 15px;
+                margin-bottom: 17px;
+            }
+            &__old-price {
+                font-size: 12px;
+            }
+            &__new-price {
+                font-size: 16px;
+            }
+        }
+    }
+    .reviews {
+        padding-bottom: 52px;
+        &__content {
+            margin-top: 40px;
+            hr {
+                margin-top: 30px;
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .review {
+        &__photo {
+            height: 130px;
+        }
+        &__name {
+            font-size: 16px;
+        }
+        &__achieve {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        &__text {
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 17px;
+        }
     }
 }
 
@@ -163,9 +269,6 @@
         }
     }
     .advant {
-        &__header {
-            font-size: 21px;
-        }
         &__wrapper {
             flex-wrap: wrap;
         }
@@ -174,6 +277,7 @@
         }
     }
     .title {
+        font-size: 21px;
         &_left {
             font-size: 24px;
             line-height: 30px;
@@ -198,6 +302,32 @@
         &_submit {
             height: 45px;
             font-size: 14px;
+        }
+    }
+    .catalog {
+        &__tabs {
+            margin-top: 19px;
+            flex-direction: column;
+        }
+        &__tab {
+            margin-bottom: 5px;
+        }
+    }
+    .review {
+        flex-direction: column;
+        &__wrapper {
+            width: 95%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        &__photo {
+            display: inherit;
+            width: 100px;
+            height: auto;
+            margin: 0 auto;
+        }
+        &__achieve {
+            margin: 0;
         }
     }
 }
