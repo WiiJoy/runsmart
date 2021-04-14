@@ -17,10 +17,15 @@ $(document).ready(function(){
         ]
     });
 
-    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() { // В списке табов при событии "клик" на таб, у которого отсутствует класс активности
+    // В списке табов при событии "клик" на таб, у которого отсутствует класс активности
+    $('ul.catalog__tabs').on('click', 'li:not(.catalog__tab_active)', function() { 
         $(this) // Указание на элемент, на который выполнено событие
-            .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active') // Для таба с событием установить класс активности, у всех остальных табов класс активности удалить
-            .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active').eq($(this).index()).addClass('catalog__content_active'); // в родителе таба найти блок с контентом, удалить класс активности, по индексу таба установить класс активности на соответствующий блок контента
+            // Для таба с событием установить класс активности, у всех остальных табов класс активности удалить
+            .addClass('catalog__tab_active').siblings().removeClass('catalog__tab_active') 
+            // в родителе таба найти блок с контентом, удалить класс активности
+            // по индексу таба установить класс активности на соответствующий блок
+            .closest('div.container').find('div.catalog__content').removeClass('catalog__content_active')
+            .eq($(this).index()).addClass('catalog__content_active');
     });
 
     
@@ -37,4 +42,26 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link');
     toggleSlide('.catalog-item__back');
+
+    // Modal
+
+    // для всех элементов с data-атрибутом data-modal=consultation при событии (.on) 'click'
+    $('[data-modal=consultation]').on('click', function() {
+        // 'отобразить (.fadeIn) элементы .overlay, #consultation со скоростью 'slow'
+        $('.overlay, #consultation').fadeIn('slow');
+    });
+    $('.modal__close').on('click', function() {
+        //скрытие элементов (.fadeOut)
+        $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
+    });
+    // $('.button_mini').on('click', function() {
+    //     $('.overlay, #order').fadeIn('slow');
+    // });
+
+    $('.button_mini').each(function(i) {
+        $(this).on('click', function() {
+            $('#order .modal__description').text($('.catalog-item__subtitle').eq(i).text());
+            $('.overlay, #order').fadeIn('slow');
+        });
+    });
 });
