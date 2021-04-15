@@ -3,6 +3,10 @@
   - верстка по методологии БЭМ
   - flex вместо bootstrap-grid
   - input и его type
-  - использование javascript:
-    - slider with silck-slider (during...)
-    - tabs with jQuery
+  - forms
+  - модальные окна
+  - использование javascript (jQuery):
+    - slider with silck-slider
+    - tabs
+    - modals
+    - validation forms

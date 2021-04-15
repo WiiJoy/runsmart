@@ -54,10 +54,8 @@ $(document).ready(function(){
         //скрытие элементов (.fadeOut)
         $('.overlay, #consultation, #thanks, #order').fadeOut('slow');
     });
-    // $('.button_mini').on('click', function() {
-    //     $('.overlay, #order').fadeIn('slow');
-    // });
 
+    // Для получения наименования позиций в descr для модалок в табах
     $('.button_mini').each(function(i) {
         $(this).on('click', function() {
             $('#order .modal__description').text($('.catalog-item__subtitle').eq(i).text());
@@ -65,22 +63,24 @@ $(document).ready(function(){
         });
     });
 
-    function validateForm(form) {
-        $(form).validate({
-            rules: {
-                name: 'required',
+    // Validate form
+
+    function validateForm(form) { // Получение селектора
+        $(form).validate({ // Валидация селектора
+            rules: { // Установка правил
+                name: 'required', // Установка обязательности поля
                 phone: 'required',
-                email: {
-                    required: true,
-                    email: true
+                email: { // Несколько проверок для поля
+                    required: true, // Установка обязательности поля
+                    email: true // Установка проверки формата
                 }
             },
-            messages: {
-                name: 'Введите свое имя',
+            messages: { // Установка сообщений ошибок
+                name: 'Введите свое имя', // Сообщение для пустого поля
                 phone: 'Введите свой номер телефона',
                 email: {
-                    required: 'Введите свой адрес почты',
-                    email: 'Неправильно введен адрес почты'
+                    required: 'Введите свой адрес почты', // Сообщение для пустого поля
+                    email: 'Неправильно введен адрес почты' // Сообщение, если неверный формат
                 }
             }
         });
