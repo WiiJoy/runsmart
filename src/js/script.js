@@ -118,7 +118,7 @@ $(document).ready(function(){
         }
     });
 
-    $("a[href^='#']").click(function() { // получение всех ссылок по опр. аттрибутам, клик
+    $("a[href^=#up]").click(function() { // получение всех ссылок по опр. аттрибутам, клик
         const _href = $(this).attr("href"); // создание переменной и получение значения из href
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"}); // воспроизведение анимации
         return false;

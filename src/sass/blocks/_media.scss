@@ -181,6 +181,9 @@
                 font-size: 12px;
             }
             &__list {
+                ul {
+                    line-height: 16px;
+                }
                 li {
                     font-size: 12px;
                     margin-bottom: 10px;

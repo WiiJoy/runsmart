@@ -127,9 +127,12 @@
             transform: translateX(0%);
             padding-right: 20px;
             transition: 0.5s all;
-            padding-left: 19px;
-            margin-bottom: 0;
-            list-style-type: none;
+            ul {
+                list-style-type: none;
+                margin-bottom: 0;
+                padding-left: 19px;
+                line-height: 18px;
+            }
             &_active {
                 transform: translateX(-100%);
                 margin-left: 0px;
