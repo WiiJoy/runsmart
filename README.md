@@ -6,6 +6,7 @@
   - forms
   - модальные окна
   - локальный сервер и отправка писем с сайта (ajax, phpmailer)
+  - анимации, animate.css, wow.js
   - использование javascript (jQuery):
     - slider with silck-slider
     - tabs
