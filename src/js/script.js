@@ -123,4 +123,6 @@ $(document).ready(function(){
         $("html, body").animate({scrollTop: $(_href).offset().top+"px"}); // воспроизведение анимации
         return false;
     });
+
+    new WOW().init();
 });

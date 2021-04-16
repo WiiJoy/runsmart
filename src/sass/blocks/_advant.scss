@@ -36,5 +36,8 @@
         display: block;
         margin: 0 auto;
         margin-top: 65px;
+        &_animated {
+            animation: heartbeat 1.5s ease infinite;
+        }
     }
 }
