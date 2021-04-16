@@ -1,12 +1,15 @@
-# Практика по использованию:
+# Практика по использованию основ в:
   - SCSS
   - верстка по методологии БЭМ
   - flex вместо bootstrap-grid
   - input и его type
   - forms
   - модальные окна
+  - локальный сервер и отправка писем с сайта (ajax, phpmailer)
   - использование javascript (jQuery):
     - slider with silck-slider
     - tabs
     - modals
     - validation forms
+    - masked input
+    - smooth scroll

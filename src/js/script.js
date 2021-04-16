@@ -107,4 +107,20 @@ $(document).ready(function(){
         });
         return false;
     });
+
+    // Smooth scroll and pageup
+
+    $(window).scroll(function() { // отслеживание скролла окна
+        if ($(this).scrollTop() > 1600) { // если скролл от верха > 1600px
+            $('.pageup').fadeIn(); // показывает ссылку pageup
+        } else { // иначе
+            $('.pageup').fadeOut(); // прячет ссылку pageup
+        }
+    });
+
+    $("a[href^='#']").click(function() { // получение всех ссылок по опр. аттрибутам, клик
+        const _href = $(this).attr("href"); // создание переменной и получение значения из href
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"}); // воспроизведение анимации
+        return false;
+    });
 });
